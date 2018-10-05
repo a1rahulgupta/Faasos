@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Food Client</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <a href="/add-order"><button class="btn btn-primary">Add order</button></a>
+           
+        </div>
+        <br/>
+        <div>
+            <a href="/predict-food"><button class="btn btn-primary">Add Predicted food</button></a>
+        </div>
+        <hr/>
+        <div>
+            <h3>Orders</h3>
+          
+               {{#if order}}
+                <table class="table">
+                <thead>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                     <th>Created till now</th>
+                      <th>Predicted</th>
+                       <th>Status</th>
+                </thead>
+                <tbody>
+                {{#each order}} 
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.quantity}}</td>
+                    </tr>
+                {{/each}} 
+                    </tbody>
+                    </table>
+               {{else}}
+                         <p><em>There are no orders.</em></p>
+               {{/if}}
+           
+        </div>
+    </body>
+</html>
