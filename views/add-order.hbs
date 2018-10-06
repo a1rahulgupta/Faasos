@@ -11,12 +11,25 @@
         <form class="form" method="POST" action="/add-order">
                 <div>
                     <label>Name</label>
-                    <select class="form-control"></select>
+                    {{!-- <input type="text" name="name" class="form-control"/>  --}}
+                    
+                    <select name="name" class="form-control">
+                        <option value="Chicken king1">Chicken king1</option>
+                        <option value="Chicken king2">Chicken king2</option>
+                        <option value="Chicken king3">Chicken king3</option>
+                        <option value="Chicken king4">Chicken king4</option>
+                        <option value="Chicken king5">Chicken king5</option>
+                    </select>
+                    
                 </div>
                  <br/>
                 <div>
                     <label>Quantity</label>
                     <input  class="form-control" type="number" placeholder="Quantity" name="quantity" value=""/> 
+                </div>
+                 <div>
+                    <label>predictedquantity</label>
+                    <input  class="form-control" type="number" placeholder="predictedquantity" name="predictedquantity" value=""/> 
                 </div>
                 <br/>
                 <div>

@@ -4,18 +4,21 @@ var Schema = mongoose.Schema;
 
 var OrderSchema = new Schema({
   name: {
-        type: String,
-    },
+    type: String,
+  },
   quantity: {
-          type: String,
-      },
-  prdeictedquantity: {
-        type: String,
-    },
-  status:{
+    type: Number,
+  },
+  orderquantitytillnow: {
+    type: Number,
+    default: 1
+  },
+  status: {
     type: Boolean,
-   
+    default: false
+  },
+  predictedquantity: {
+    type: Number
   }
-  
 });
 module.exports = mongoose.model('Order', OrderSchema);
